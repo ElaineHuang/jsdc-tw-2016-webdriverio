@@ -3,7 +3,7 @@ const assert = require('assert');
 describe('demo 1', function() {
 
 	beforeEach(function() {
-		browser.pause(5000);
+		browser.pause(1000);
 	});
 
 	it('check website h1 text', function() {
