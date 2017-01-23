@@ -39,3 +39,9 @@ npm run demo2
 
 ### more example
 * [modern web 2016 e2e test demo](https://github.com/alincode/modern-web-2016-e2etest)
+
+### install Chimp
+
+```
+npm install chimp -g
+```

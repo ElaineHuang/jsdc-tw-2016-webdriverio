@@ -1,9 +1,9 @@
-var assert = require('assert');
+let assert = require('assert');
 
 describe('demo 2', function() {
 
   beforeEach(function() {
-    browser.pause(8000);
+    browser.pause(1000);
   });
 
   it('login failure', function() {
