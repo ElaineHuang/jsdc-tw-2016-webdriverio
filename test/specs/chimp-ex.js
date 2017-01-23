@@ -1,4 +1,4 @@
-let assert = require('assert');
+const assert = require('assert');
 
 describe('Chimp Mocha', () => {
   describe('Page title', () => {

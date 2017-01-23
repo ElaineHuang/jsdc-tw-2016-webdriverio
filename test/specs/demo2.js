@@ -1,4 +1,4 @@
-let assert = require('assert');
+const assert = require('assert');
 
 describe('demo 2', function() {
 
