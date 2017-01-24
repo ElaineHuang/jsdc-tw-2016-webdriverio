@@ -42,8 +42,7 @@ exports.config = {
     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
     // grid with only 5 firefox instance available you can make sure that not more than
     // 5 instance gets started at a time.
-    maxInstances: 5,
-    //
+    maxInstances: 1, // 1 instance gets started at a time.
     browserName: 'chrome'
   }],
   //
@@ -148,6 +147,9 @@ exports.config = {
       width: 375,
       height: 667
     });
+    const chai = require('chai');
+    global.expect = chai.expect;
+    chai.Should();
   },
   //
   // Hook that gets executed before the suite starts
