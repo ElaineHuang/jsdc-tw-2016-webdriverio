@@ -31,7 +31,7 @@ describe('Github page test', () => {
     });
   });
 
-  describe('star & unstar repo @watch', () => {
+  describe('star & unstar repo', () => {
     it('should be star repository', () => {
       GithubPage.createRepo(starRepo);
       GithubPage.starProject(starRepo);

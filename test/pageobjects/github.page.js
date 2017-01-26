@@ -30,7 +30,7 @@ class GithubPage extends Page {
     get unStarBtn() { return browser.element('#js-pjax-container > div > div.col-9.float-left.pl-2 > div.js-repo-filter.position-relative > div:nth-child(2) > div.float-right > div > form.starred > button'); }
 
     open() {
-super.open('https://github.com/');
+        super.open('https://github.com/');
         this.headerLoaded.waitForExist();
     }
     login(username, password) {
