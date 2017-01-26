@@ -1,4 +1,4 @@
-exports.config = {
+  exports.config = {
 
   //
   // ==================
@@ -10,12 +10,12 @@ exports.config = {
   // directory is where your package.json resides, so `wdio` will be called from there.
   //
   specs: [
-    './test/specs/**/*.js'
+    './test/specs/**/*.spec.js'
   ],
   suites: {
-    demo: ['./test/specs/demo/demo.js', './test/specs/demo/demo2.js'],
-    chimp: ['./test/specs/chimp/chimp-ex.js'],
-    github: []
+    demo: ['./test/specs/demo/demo.spec.js', './test/specs/demo/demo2.spec.js'],
+    chimp: ['./test/specs/chimp/chimp-ex.spec.js'],
+    github: ['./test/specs/github/github.spec.js']
   },
   // Patterns to exclude.
   exclude: [
@@ -148,10 +148,6 @@ exports.config = {
   // Gets executed before test execution begins. At this point you can access all global
   // variables, such as `browser`. It is the perfect place to define custom commands.
   before: function(capabilities, specs) {
-    browser.windowHandleSize({
-      width: 375,
-      height: 667
-    });
     const chai = require('chai');
     global.expect = chai.expect;
     chai.Should();

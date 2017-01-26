@@ -1,7 +1,13 @@
 const assert = require('assert');
 
 describe('demo 1', function() {
-
+	before(function() {
+		browser.windowHandleSize({
+      width: 375,
+      height: 667
+    });
+	});
+	
 	beforeEach(function() {
 		browser.pause(1000);
 	});
