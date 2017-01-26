@@ -12,6 +12,11 @@ exports.config = {
   specs: [
     './test/specs/**/*.js'
   ],
+  suites: {
+    demo: ['./test/specs/demo/demo.js', './test/specs/demo/demo2.js'],
+    chimp: ['./test/specs/chimp/chimp-ex.js'],
+    github: []
+  },
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
