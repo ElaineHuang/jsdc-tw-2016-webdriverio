@@ -59,7 +59,8 @@ class GithubPage extends Page {
         this.settingModal.waitForExist();
         this.settingModalRename.setValue(repositoryName);
         this.settingModalRename.leftClick(10, 10);
-        this.settingModalDelete.waitForEnabled(1000);
+        this.settingModalRename.doubleClick();
+        this.settingModalDelete.waitForEnabled(6000);
         this.settingModalDelete.click();
         this.indexFlashNotice.waitForExist();
     }
