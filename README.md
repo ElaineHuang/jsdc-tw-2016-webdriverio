@@ -7,7 +7,7 @@ cd webdriverio_example
 npm install
 ```
 
-### install Chimp
+**install Chimp**
 
 ```
 npm install chimp -g
