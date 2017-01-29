@@ -4,7 +4,7 @@ describe('Chimp Mocha', () => {
       browser.url('http://google.com');
       browser.getTitle().should.be.equal('Google');
       // browser.element('input#lst-ib.gsfi').setValue('Taroko Software');
-      // browser.click('input[type="submit"]:nth-child(1)');
+      // browser.submitForm('#tsf');
     });
   });
 });
