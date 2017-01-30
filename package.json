@@ -9,7 +9,7 @@
     "test": "wdio wdio.conf.js",
     "demo": "wdio wdio.conf.js --suite demo",
     "github": "wdio wdio.conf.js --suite github",
-    "chimp": "chimp --mocha --watch --path=test",
+    "chimp": "chimp --mocha --watch --path=test --browser=firefox",
     "jshint": "./node_modules/.bin/jshint --verbose --config .jshintrc test/"
   },
   "repository": {

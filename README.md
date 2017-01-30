@@ -11,7 +11,7 @@ npm install
 
 ```
 npm install chimp -g
-chimp --mocha --watch --path=test --browser=<chrome/firefox>
+chimp --mocha --watch --path=test --browser=firefox>
 ```
 
 **install selenium-standalone (If you can't use service)**
