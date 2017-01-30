@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 class Page {
   constructor() {
     this.title = 'Page';

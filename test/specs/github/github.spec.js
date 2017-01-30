@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 const randomstring = require('randomstring');
 const repositoryName = randomstring.generate({
   length: 12,
@@ -37,7 +37,7 @@ describe('Github page test', () => {
       GithubPage.starProject(starRepo);
     });
     it('should be unstar repository', () => {
-      GithubPage.unstarProject()
+      GithubPage.unstarProject();
       GithubPage.searchRepo(username, starRepo);
       GithubPage.deleteRepo(starRepo);
     });

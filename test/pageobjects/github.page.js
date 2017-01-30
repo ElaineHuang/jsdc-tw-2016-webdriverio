@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 const Page = require('./page');
 
 class GithubPage extends Page {
@@ -45,8 +45,8 @@ class GithubPage extends Page {
         this.indexCreateBtn.click();
         this.indexDropdown.waitForExist();
         this.indexDropdownNewRepo.click();
-        this.newRepoName.waitForExist()
-        this.newRepoName.setValue(repositoryName)
+        this.newRepoName.waitForExist();
+        this.newRepoName.setValue(repositoryName);
         this.newRepoSubmit.click();
         this.repContainer.waitForExist();
     }
