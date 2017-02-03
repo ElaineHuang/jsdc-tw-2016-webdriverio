@@ -31,3 +31,12 @@ npm run demo
 npm run github
 npm run chimp
 ```
+
+**allure report**
+
+After testing, you can execute two commands to generate and open the allure results.
+
+```
+npm run allure
+npm run report
+```
