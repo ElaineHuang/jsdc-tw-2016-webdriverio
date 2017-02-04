@@ -6,6 +6,10 @@ class GithubPage extends Page {
     get username() { return browser.element('#login_field'); }
     get password()  { return browser.element('#password'); }
     get loginSubmit() { return browser.element('input.btn'); }
+    get repoTitle() { return browser.element('#your_repos > h3'); }
+    get projectName() { return browser.element('div.container.repohead-details-container > h1 > strong > a'); }
+    get unstarNum() { return browser.element('form.unstarred > a.social-count.js-social-count'); }
+    get starNum() { return browser.element('form.starred > a.social-count.js-social-count'); }
     get indexAvatar()     { return browser.element('img.avatar'); }
     get headerLoaded() { return browser.element('header.site-header'); }
     get indexCreateBtn() { return browser.element('.header-nav-link.tooltipped.tooltipped-s.js-menu-target'); }
@@ -40,15 +44,18 @@ class GithubPage extends Page {
         this.password.setValue(password);
         this.loginSubmit.click();
         this.indexAvatar.waitForExist();
+        this.repoTitle.getText().should.be.contain('Your repositories');
     }
     createRepo(repositoryName) {
         this.indexCreateBtn.click();
         this.indexDropdown.waitForExist();
+        this.indexDropdownNewRepo.getText().should.be.equal('New repository');
         this.indexDropdownNewRepo.click();
         this.newRepoName.waitForExist();
         this.newRepoName.setValue(repositoryName);
         this.newRepoSubmit.click();
         this.repContainer.waitForExist();
+        browser.getText(`*=${repositoryName}`).should.be.equal(repositoryName);
     }
     deleteRepo(repositoryName) {
         this.repContainer.waitForExist();
@@ -63,12 +70,14 @@ class GithubPage extends Page {
         this.settingModalDelete.waitForEnabled(6000);
         this.settingModalDelete.click();
         this.indexFlashNotice.waitForExist();
+        this.indexFlashNotice.getText().should.be.contain('was successfully deleted.');
     }
     searchRepo(account, repositoryName) {
         let resName = account + '/' + repositoryName;
         browser.click('svg.octicon.octicon-mark-github');
         browser.waitForExist('div.boxed-group-action');
         browser.click('span[title="' + resName + '"]');
+        this.projectName.getText().should.be.equal(repositoryName);
     }
     starProject(project) {
         browser.click('svg.octicon.octicon-mark-github');
